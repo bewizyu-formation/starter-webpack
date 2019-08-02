@@ -1,0 +1,57 @@
+/* Ne plus afficher le menu  sur la "page d'accueil" */
+div.overview__main-col > section:last-child {
+	display: none
+}
+
+/* Ne plus afficher le lien/bouton "Détails" */
+.overview__details-trigger {
+	display: none
+}
+
+/* Bouton centré */
+.overview__button {
+  position: relative;
+  top: 70%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Titre au centre */
+.overview__title-wrap {
+	text-align: center
+}
+
+/* Suppression Menu logo centré */
+/* .figure-image {
+	display: none
+}
+
+.main {
+	display: none;
+} */
+
+.overview__content {
+	padding-top: 150px;
+}
+
+.overview__container {
+	margin: auto;
+	padding-top: 0px;
+}
+
+.overview__logo {
+	position: absolute;
+	top: 18%; left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	padding-bottom: 0px;
+}
+
+
+/* Logo Innovert */
+
+.page__header-limit {
+	background-image: url("../assets/LOGO.jpg");
+	background-size: 11%;
+	background-repeat: no-repeat;
+	background-position: right 5% top 5%;
+}
