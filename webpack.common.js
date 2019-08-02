@@ -23,13 +23,11 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: ['**/*'],
     }),
     new HtmlWebpackPlugin({
-      title: 'Atlantic PWA',
+      title: 'Starter WebPack',
       template: 'src/index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([
-      {from: './src/doc', to: 'doc', toType: 'dir', context: '.'},
-      // 'src/doc/**/*',
       './src/manifest.json',
       {from: './src/assets/**/*', to: 'assets', flatten: true}
     ]),

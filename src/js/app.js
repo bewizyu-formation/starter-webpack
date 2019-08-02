@@ -1,3 +1,5 @@
+import {dummy} from './services/sample.service'
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('./sw.js')
@@ -6,5 +8,19 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-console.log('Open documentation index');
-window.location = 'doc/index.html';
+const app = {
+  init () {
+    const button = document.getElementById('button-test');
+    button.addEventListener('click', () => {
+      dummy().then(mock => {
+
+        const label = document.createElement('p');
+        label.innerHTML = mock.test;
+        document.body.appendChild(label);
+
+      })
+    });
+  },
+}
+
+app.init();
